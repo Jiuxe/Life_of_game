@@ -20,8 +20,8 @@ dimCH = height / nyC
 gameState = np.zeros((nxC, nyC))
 
 # Generar moviles
-for num_mov in range(0,10):
-    pivot = random.randint(0,50)
+for num_mov in range(0,30):
+    pivot = random.randint(2,48)
     gameState[pivot - 1,    pivot]      = 1
     gameState[pivot,        pivot + 1]  = 1
     gameState[pivot + 1,    pivot - 1]  = 1
@@ -33,7 +33,7 @@ while True:
     newGameState = np.copy(gameState)
 
     screen.fill(bg)
-    time.sleep(0.1)
+    time.sleep(0.001)
 
     for y in range(0,nxC):
         for x in range(0,nyC):
