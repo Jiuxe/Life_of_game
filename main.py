@@ -33,7 +33,7 @@ while True:
     newGameState = np.copy(gameState)
 
     screen.fill(bg)
-    time.sleep(0.001)
+    time.sleep(0.1)
 
     for y in range(0,nxC):
         for x in range(0,nyC):
@@ -70,7 +70,17 @@ while True:
 
     pygame.display.flip()
 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+            pygame.quit()
+            quit()
+
+
 """
 if __name__ == '__main__':
 """
+
+
+
+
 
